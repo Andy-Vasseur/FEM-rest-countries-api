@@ -22,4 +22,75 @@ body {
 
 body {
     margin: auto;
+    transition: $transition-300;
+
+    &.dark {
+        color: $white;
+        background: $very-dark-blue-dark-mode;
+
+        .Navigation {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: $dark-blue-dark-elements;
+            transition: $transition-300;
+
+            a {
+                color: $white;
+            }
+
+            button {
+                color: $white;
+            }
+        }
+
+        .Homepage {
+
+            &-header {
+                color: $white;
+
+                &-countries-input {
+                    color: $white;
+                    background-color: $dark-blue-dark-elements;
+
+                    input {
+                        color: $white;
+                        background-color: $dark-blue-dark-elements;
+
+                        &:focus {
+                            color: $white;
+                        }
+
+                        &::placeholder {
+                            color: $white;
+                        }
+                    }
+                }
+
+            }
+
+            &-main {
+                &-countries {
+                    .Country-card {
+                        background-color: $dark-blue-dark-elements;
+                        transition: $transition-300;
+
+                        h2 {
+                            color: $white;
+                        }
+
+                        p {
+                            color: $dark-gray-dark-elements;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Country {
+
+            a {
+                color: $white;
+                background-color: $dark-blue-dark-elements;
+            }
+        }
+    }
 }

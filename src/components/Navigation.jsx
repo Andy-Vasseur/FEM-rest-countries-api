@@ -3,14 +3,15 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 // Icons
-import { FiMoon } from "react-icons/fi"
+import { BiMoon, BiSolidMoon } from "react-icons/bi"
 
 function Navigation() {
 
     const [isDarkMode, setIsDarkMode] = useState(false)
 
     const handleDarkMode = () => {
-        console.log("Dark Mode")
+        const bodyContainsDarkClass = document.body.classList.toggle("dark")
+        setIsDarkMode(bodyContainsDarkClass)
     }
 
     return (
@@ -23,7 +24,13 @@ function Navigation() {
             <div className="Navigation-theme">
                 <button type="button" onClick={handleDarkMode}>
                     <span>
-                        <FiMoon />
+                        {
+                            isDarkMode ?
+                                <BiSolidMoon />
+                                :
+                                <BiMoon />
+
+                        }
                     </span>
                     Dark Mode
                 </button>

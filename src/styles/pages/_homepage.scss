@@ -1,0 +1,97 @@
+.Homepage {
+    padding: 2.5rem 6rem;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        // background: rgba($color: #f88f8f, $alpha: 1.0);
+
+        &-countries-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            color: $dark-gray-dark-elements;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1rem;
+                font-size: 1.1rem;
+            }
+
+            input {
+                width: 200px;
+                height: 50px;
+                border: none;
+                font-weight: 600;
+                transition: $transition-300;
+
+                &:focus {
+                    width: 350px;
+                    color: $dark-gray-dark-elements;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &-main {
+
+        &-countries {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 60px;
+            grid-row-gap: 60px;
+            margin-top: 2rem;
+            place-items: center;
+
+            &-not-found {
+                font-size: 1.9rem;
+            }
+
+            .Country-card {
+                display: flex;
+                flex-direction: column;
+                width: 320px;
+                height: 400px;
+                max-width: 320px;
+                max-height: 400px;
+                color: $very-dark-blue-light-mode;
+                text-decoration: none;
+                border-radius: 4px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                transition: $transition-200;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &-flag {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                &-content {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 1rem 1.5rem;
+                    line-height: 1.8rem;
+
+                    &-name {
+                        margin: 1rem 0;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

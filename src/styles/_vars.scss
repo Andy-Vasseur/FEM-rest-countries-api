@@ -1,0 +1,28 @@
+// ====================================================================================
+// FONTS
+// ====================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,600;0,6..12,800;1,6..12,300;1,6..12,600;1,6..12,800&display=swap');
+$primary-font: 'Nunito Sans', sans-serif;
+
+// ====================================================================================
+// COLORS
+// ====================================================================================
+$dark-blue-dark-elements: hsl(209, 23%, 22%);
+$very-dark-blue-dark-mode: hsl(207, 26%, 17%);
+$very-dark-blue-light-mode: hsl(200, 15%, 8%);
+$dark-gray-dark-elements: hsl(0, 0%, 52%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// ====================================================================================
+// TRANSITIONS
+// ====================================================================================
+$transition-100: all 100ms ease;
+$transition-200: all 200ms ease;
+$transition-300: all 300ms ease;
+$transition-400: all 400ms ease;
+$transition-500: all 500ms ease;
+$transition-600: all 600ms ease;
+$transition-700: all 700ms ease;
+$transition-800: all 800ms ease;
+$transition-900: all 900ms ease;

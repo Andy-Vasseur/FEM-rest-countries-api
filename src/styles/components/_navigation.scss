@@ -1,0 +1,44 @@
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    &-logo {
+
+        a {
+            color: $very-dark-blue-light-mode;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+    }
+
+    &-theme {
+        transition: $transition-200;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: none;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

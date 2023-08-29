@@ -78,20 +78,22 @@ function Homepage() {
                         <h1 className="Homepage-main-countries-not-found">No countries were found...</h1>
                     ) : (
                         currentCountries.map((country, index) => (
-                            <Link to={`/countries/${country.alpha3Code}`} className="Country-card" key={index} rel='preload'>
-                                <img
-                                    className='Country-card-flag'
-                                    srcSet={country.flag}
-                                    alt={country.name}
-                                    loading='lazy'
-                                />
-                                <div className="Country-card-content">
-                                    <h2 className='Country-card-content-name'>{country.name}</h2>
-                                    <p className='Country-card-content-population'><strong>Population:</strong> {country.population ? addCommasToNumber(country.population) : 'N/A'}</p>
-                                    <p className='Country-card-content-region'><strong>Region:</strong> {country.region}</p>
-                                    <p className='Country-card-content-capital'><strong>Capital:</strong> {country.capital}</p>
-                                </div>
-                            </Link>
+                            <li key={index}>
+                                <Link to={`/countries/${country.alpha3Code}`} className="Country-card" rel='preload'>
+                                    <img
+                                        className='Country-card-flag'
+                                        srcSet={country.flag}
+                                        alt={country.name}
+                                        loading='lazy'
+                                    />
+                                    <div className="Country-card-content">
+                                        <h2 className='Country-card-content-name'>{country.name}</h2>
+                                        <p className='Country-card-content-population'><strong>Population:</strong> {country.population ? addCommasToNumber(country.population) : 'N/A'}</p>
+                                        <p className='Country-card-content-region'><strong>Region:</strong> {country.region}</p>
+                                        <p className='Country-card-content-capital'><strong>Capital:</strong> {country.capital}</p>
+                                    </div>
+                                </Link>
+                            </li>
                         ))
                     )}
                 </ul>

@@ -30,7 +30,10 @@ function Return2Top() {
 
     return (
         <div className={`Return2Top ${showButton ? 'visible' : ''}`}>
-            <button onClick={scrollToTop}>
+            {/* put a name on the button */}
+            <button
+                aria-label="Return to top button"
+                onClick={scrollToTop}>
                 <BsArrowUpShort />
             </button>
         </div>

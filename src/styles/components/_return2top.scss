@@ -1,0 +1,32 @@
+.Return2Top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 9999;
+
+    button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        color: $white;
+        border: none;
+        border-radius: 50%;
+        font-size: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        background-color: $dark-blue-dark-elements;
+        transition: $transition-200;
+
+        &:hover {
+            background-color: $dark-gray-dark-elements;
+        }
+    }
+}
+
+.Return2Top.visible {
+    opacity: 1;
+}

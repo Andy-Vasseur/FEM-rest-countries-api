@@ -4,6 +4,7 @@
 @import 'vars';
 // Components
 @import 'components/navigation';
+@import 'components/return2top';
 // Pages
 @import 'pages/homepage';
 @import 'pages/country';
@@ -90,6 +91,16 @@ body {
             a {
                 color: $white;
                 background-color: $dark-blue-dark-elements;
+            }
+        }
+
+        .Return2Top {
+            button {
+                background-color: $dark-blue-dark-elements;
+
+                &:hover {
+                    background-color: $dark-gray-dark-elements;
+                }
             }
         }
     }

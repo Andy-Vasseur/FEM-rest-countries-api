@@ -15,12 +15,10 @@ function Country() {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    // get names of borders countries in country using their code
     const bordersCountries = country.borders.map((border) => {
         const borderCountry = allData.find((country) => country.alpha3Code === border)
         return borderCountry.name
     })
-    console.log(bordersCountries)
 
     return (
         <div className="Country">
@@ -34,7 +32,11 @@ function Country() {
             </div>
             <div className="Country-main">
                 <div className="Country-main-flag">
-                    <img src={country.flag} alt={country.name} />
+                    <img
+                        srcSet={country.flag}
+                        alt={country.name}
+                        loading='lazy'
+                    />
                 </div>
                 <div className="Country-main-infos">
                     <h1>{country.name}</h1>

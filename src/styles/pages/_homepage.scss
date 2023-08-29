@@ -6,7 +6,6 @@
         justify-content: space-between;
         align-items: center;
         height: 70px;
-        // background: rgba($color: #f88f8f, $alpha: 1.0);
 
         &-countries-input {
             display: flex;
@@ -91,6 +90,39 @@
                         font-size: 1.2rem;
                     }
                 }
+            }
+        }
+
+        .Pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+
+            &-button {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 0.5rem;
+                width: 40px;
+                height: 40px;
+                color: $white;
+                border-radius: 4px;
+                border: none;
+                font-size: 1.2rem;
+                font-weight: 600;
+                background-color: $dark-blue-dark-elements;
+                transition: $transition-300;
+
+                &:hover {
+                    background-color: $dark-gray-dark-elements;
+                }
+            }
+
+            .active {
+                color: $white;
+                background-color: $very-dark-blue-light-mode;
             }
         }
     }

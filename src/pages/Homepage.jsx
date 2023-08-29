@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { PiMagnifyingGlassBold } from 'react-icons/pi';
 import allData from '../data/data.json';
 import Return2Top from '../components/Return2Top';
+import LazyImage from '../components/LazyImage';
 
 function Homepage() {
     const data = allData;
@@ -80,11 +81,9 @@ function Homepage() {
                         currentCountries.map((country, index) => (
                             <li key={index}>
                                 <Link to={`/countries/${country.alpha3Code}`} className="Country-card" rel='preload'>
-                                    <img
-                                        className='Country-card-flag'
-                                        srcSet={country.flag}
+                                    <LazyImage
+                                        src={country.flag}
                                         alt={country.name}
-                                        loading='lazy'
                                     />
                                     <div className="Country-card-content">
                                         <h2 className='Country-card-content-name'>{country.name}</h2>
